@@ -1,4 +1,13 @@
-const rootElem = document.getElementById('root');
+import React from "react";
+import { render } from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
 
-const html = rootElem.innerHTML;
-rootElem.innerHTML = 'Welcome to the Adeva take home test. Please follow the instructions in the README and have fun 😃.';
+const rootElem = document.getElementById("root");
+
+render(
+  <Router>
+    <App />
+  </Router>,
+  rootElem
+);

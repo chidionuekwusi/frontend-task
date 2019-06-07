@@ -1,0 +1,46 @@
+@import "./variables.scss";
+body,
+html,
+.app_container,
+:global(#root) {
+  height: 100%;
+  width: 100%;
+  font-family: Lato;
+  margin: 0;
+}
+p,
+h1 {
+  margin: 0;
+}
+
+.app_container {
+  display: grid;
+  grid-template-areas:
+    "logo header header header header header"
+    "side content content content content content"
+    "side content content content content content";
+  grid-template-rows: 64px auto auto;
+  grid-template-columns: 400px auto auto auto;
+}
+.header {
+  grid-area: header;
+  box-shadow: $box-shadow;
+  padding: 0px $content-padding;
+}
+.logo {
+  background-color: $accent-color;
+  color: $accent-foreground-color;
+  padding: $content-padding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side {
+  grid-area: side;
+  box-shadow: $box-shadow;
+  padding: $content-padding;
+}
+.content {
+  grid-area: content;
+  padding: $content-padding;
+}
