@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+.new_note_container {
+  h1 {
+    margin-bottom: $content-padding;
+  }
+  .note_card {
+    @include note;
+    display: flex;
+    flex-direction: column;
+    .title {
+      border: none;
+    }
+    .content {
+      border: none;
+    }
+  }
+}

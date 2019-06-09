@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import { NotesProvider } from "./contexts/notes";
 import SideNav from "./components/sidenav";
 import Dashboard from "./containers/dashboard";
@@ -11,17 +11,19 @@ function App() {
     <NotesProvider>
       <div className={classNames.app_container}>
         <div className={classNames.logo}>
-          <h1>
-            adeva💙notes
-          </h1>
+          <Link to="/">
+            <h1>adeva💙notes</h1>
+          </Link>
         </div>
         <div className={classNames.header} />
         <div className={classNames.side}>
           <SideNav />
         </div>
         <div className={classNames.content}>
-          <Route path="/note/:id" component={Note} />
-          <Route path="/" component={Dashboard} />
+          <Switch>
+            <Route path="/note/:id" component={Note} />
+            <Route path="/" component={Dashboard} />
+          </Switch>
         </div>
       </div>
     </NotesProvider>

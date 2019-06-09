@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.note {
+  @include note;
+  width: 33.3%;
+  cursor: pointer;
+  position: relative;
+  margin: $preview-margin;
+  .content {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
+  }
+  &:hover::after {
+    background: rgba(255, 255, 255, 0.421);
+    transition: background 0.2s;
+  }
+  .delete {
+    @include button;
+    position: absolute;
+    bottom: $content-padding/2;
+    right: $content-padding/2;
+    z-index: 1;
+  }
+}
