@@ -4,7 +4,7 @@ import Note from "../../components/note-preview";
 import FabButton from "../../components/fab-button";
 import classes from "./style.scss";
 
-const Dashboard = function(props) {
+const Dashboard = props => {
   const notesContext = useContext(NotesContext);
   const notes = useMemo(() => notesContext.get(), [notesContext]);
   const [query, setQuery] = useState("");
@@ -43,6 +43,7 @@ const Dashboard = function(props) {
       <div className={classes.search_bar}>
         <i className="fas fa-search" />
         <input
+          id="query"
           value={query}
           onChange={e => setQuery(e.target.value)}
           placeholder="Search for a note"
@@ -60,4 +61,5 @@ const Dashboard = function(props) {
   );
 };
 
+Dashboard.propTypes = {};
 export default Dashboard;

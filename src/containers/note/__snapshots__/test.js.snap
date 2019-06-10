@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Note /> renders correctly 1`] = `
+<div>
+  <div>
+    <input
+      onChange={[Function]}
+      placeholder="Title"
+      value="Note"
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Note"
+      value="Content"
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    <i
+      className="fas fa-save"
+    />
+  </button>
+</div>
+`;

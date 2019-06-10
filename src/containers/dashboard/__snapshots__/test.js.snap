@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dashboard /> renders correctly 1`] = `
+<div>
+  <div>
+    <i
+      className="fas fa-search"
+    />
+    <input
+      id="query"
+      onChange={[Function]}
+      placeholder="Search for a note"
+      value=""
+    />
+  </div>
+  <div>
+    <div
+      onClick={[Function]}
+    >
+      <p>
+        Fake
+      </p>
+      <span>
+        Content
+      </span>
+      <button
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-trash"
+        />
+      </button>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    <i
+      className="fas fa-plus"
+    />
+  </button>
+</div>
+`;

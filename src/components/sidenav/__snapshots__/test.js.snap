@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`side nav renders list of notes 1`] = `
+<ul>
+  <li>
+    <a
+      href="/note/1"
+      onClick={[Function]}
+    >
+      Fake
+    </a>
+  </li>
+  <li>
+    <a
+      href="/note/2"
+      onClick={[Function]}
+    >
+      Fake 2
+    </a>
+  </li>
+</ul>
+`;

@@ -19,8 +19,6 @@
   },
   "homepage": "https://github.com/adevait/take-home-task#readme",
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "jest": "^23.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
@@ -40,7 +38,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^0.28.10",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^2.0.0",
@@ -48,13 +49,23 @@
     "extract-text-webpack-plugin": "^4.0.0-alpha.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.0.6",
+    "jest": "^23.6.0",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.1",
+    "react-test-renderer": "^16.8.6",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/jestsetup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js"
+    }
   }
 }
