@@ -5,6 +5,16 @@
   width: 100%;
   margin: 0px -$preview-margin;
 }
+.copy {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  p {
+    color: $copy-color;
+  }
+}
 .search_bar {
   border: 1.5px solid black;
   border-radius: 16px;

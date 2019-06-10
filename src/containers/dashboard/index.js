@@ -38,6 +38,7 @@ const Dashboard = props => {
     const id = notesContext.add({});
     props.history.push(`/note/${id}`);
   }, [notes]);
+
   return (
     <div className={classes.container}>
       <div className={classes.search_bar}>
@@ -50,11 +51,26 @@ const Dashboard = props => {
         />
       </div>
       <div className={classes.notes_container}>
-        {filteredNodes.map(note => {
-          return (
-            <Note {...note} onDelete={onDelete} onEdit={onEdit} key={note.id} />
-          );
-        })}
+        {(filteredNodes.length &&
+          filteredNodes.map(note => {
+            return (
+              <Note
+                {...note}
+                onDelete={onDelete}
+                onEdit={onEdit}
+                key={note.id}
+              />
+            );
+          })) ||
+          (query && (
+            <div className={classes.copy}>
+              😳 <p>Oops , looks like nothing matches your search term</p>
+            </div>
+          )) || (
+            <div className={classes.copy}>
+              😄<p>Please click the button below to add a new note</p>
+            </div>
+          )}
       </div>
       <FabButton icon="plus" onClick={createNewNote} />
     </div>
